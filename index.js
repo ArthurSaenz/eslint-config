@@ -135,12 +135,13 @@ module.exports = {
         allowArrowFunctions: true,
       },
     ],
-    "react/jsx-props-no-spreading": [
-      "error",
-      {
-        html: "ignore",
-      },
-    ],
+    "react/jsx-props-no-spreading": "off",
+    // "react/jsx-props-no-spreading": [
+    //   "error",
+    //   {
+    //     html: "ignore",
+    //   },
+    // ],
     "react/jsx-curly-brace-presence": "warn",
     "react/jsx-pascal-case": "warn",
     "react/jsx-no-undef": "error",
@@ -451,6 +452,11 @@ module.exports = {
             selector: "parameter",
             format: ["camelCase"],
             leadingUnderscore: "allow",
+            filter: {
+              // you can expand this regex to add more allowed names
+              regex: "[Story]",
+              match: false,
+            },
           },
           {
             selector: "typeLike",
