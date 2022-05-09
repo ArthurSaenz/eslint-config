@@ -229,7 +229,8 @@ module.exports = {
     "no-useless-return": "warn",
     "no-void": "warn",
     "no-with": "error",
-    radix: "error",
+    // radix: "error",
+    radix: "off",
     yoda: "warn",
 
     // eslint variable rules
@@ -437,6 +438,11 @@ module.exports = {
             prefix: ["I"],
           },
           {
+            selector: "typeParameter",
+            format: ["PascalCase"],
+            prefix: ["T"],
+          },
+          {
             selector: "variable",
             format: ["camelCase", "UPPER_CASE", "PascalCase"],
             leadingUnderscore: "allow",
@@ -452,7 +458,8 @@ module.exports = {
           },
         ],
         "@typescript-eslint/consistent-type-assertions": "warn",
-        "@typescript-eslint/consistent-type-definitions": ["warn", "interface"],
+        // "@typescript-eslint/consistent-type-definitions": ["warn", "interface"],
+        "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
         "@typescript-eslint/no-array-constructor": "warn",
         "@typescript-eslint/no-empty-interface": "warn",
         "@typescript-eslint/no-explicit-any": "warn",
